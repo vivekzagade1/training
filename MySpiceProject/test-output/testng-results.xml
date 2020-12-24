@@ -1,53 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="10" passed="9">
+<testng-results skipped="0" failed="0" ignored="5" total="18" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="64" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
+  <suite name="Suite" duration-ms="50" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
     <groups>
+      <group name="Regression">
+        <method signature="CheckinOnline.CheckinOnline_PNR_Number2()[pri:0, instance:OnlineCheckin.CheckinOnline@72b6cbcc]" name="CheckinOnline_PNR_Number2" class="OnlineCheckin.CheckinOnline"/>
+      </group> <!-- Regression -->
     </groups>
-    <test name="Test" duration-ms="64" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
-      <class name="Bookings.BookHoliday">
-        <test-method status="PASS" signature="Bookholiday_Departure()[pri:0, instance:Bookings.BookHoliday@6e0e048a]" name="Bookholiday_Departure" duration-ms="8" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
+    <test name="Test" duration-ms="50" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
+      <class name="Bookings.ListenerClass1">
+        <test-method status="PASS" signature="tc1()[pri:0, instance:Bookings.ListenerClass1@57855c9a]" name="tc1" duration-ms="6" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Bookholiday_Departure -->
-        <test-method status="PASS" signature="Bookholiday_Destination()[pri:0, instance:Bookings.BookHoliday@6e0e048a]" name="Bookholiday_Destination" duration-ms="2" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
+        </test-method> <!-- tc1 -->
+      </class> <!-- Bookings.ListenerClass1 -->
+      <class name="Bookings.BookHoliday">
+        <test-method status="PASS" signature="Bookholiday_Destination()[pri:0, instance:Bookings.BookHoliday@63e2203c]" name="Bookholiday_Destination" duration-ms="0" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bookholiday_Destination -->
-        <test-method status="PASS" signature="Bookholiday_Return()[pri:0, instance:Bookings.BookHoliday@6e0e048a]" name="Bookholiday_Return" duration-ms="1" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bookholiday_Return -->
       </class> <!-- Bookings.BookHoliday -->
       <class name="Bookings.BookHotel">
-        <test-method status="PASS" signature="BookHotel_Checkin()[pri:0, instance:Bookings.BookHotel@5bc79255]" name="BookHotel_Checkin" duration-ms="1" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
+        <test-method status="PASS" signature="BookHotel_Checkin()[pri:0, instance:Bookings.BookHotel@1efed156]" name="BookHotel_Checkin" duration-ms="1" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BookHotel_Checkin -->
-        <test-method status="PASS" signature="BookHotel_Checkout()[pri:0, instance:Bookings.BookHotel@5bc79255]" name="BookHotel_Checkout" duration-ms="1" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BookHotel_Checkout -->
-        <test-method status="PASS" signature="BookHotel_Destination()[pri:0, instance:Bookings.BookHotel@5bc79255]" name="BookHotel_Destination" duration-ms="1" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
+        <test-method status="PASS" signature="BookHotel_Destination()[pri:0, instance:Bookings.BookHotel@1efed156]" name="BookHotel_Destination" duration-ms="1" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BookHotel_Destination -->
       </class> <!-- Bookings.BookHotel -->
       <class name="Bookings.BookFlight">
-        <test-method status="PASS" signature="BookFlight_OneWay_TestCase4()[pri:0, instance:Bookings.BookFlight@47ef968d]" name="BookFlight_OneWay_TestCase4" duration-ms="1" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BookFlight_OneWay_TestCase4 -->
-        <test-method status="PASS" signature="BookFlight_RoundTrip_TestCase1()[pri:0, instance:Bookings.BookFlight@47ef968d]" name="BookFlight_RoundTrip_TestCase1" duration-ms="1" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
+        <test-method status="PASS" signature="BookFlight_RoundTrip_TestCase1()[pri:0, instance:Bookings.BookFlight@6737fd8f]" name="BookFlight_RoundTrip_TestCase1" duration-ms="1" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BookFlight_RoundTrip_TestCase1 -->
-        <test-method status="PASS" signature="BookFlight_RoundTrip_TestCase2()[pri:0, instance:Bookings.BookFlight@47ef968d]" name="BookFlight_RoundTrip_TestCase2" duration-ms="1" started-at="2020-12-23T20:41:42 IST" finished-at="2020-12-23T20:41:42 IST">
+        <test-method status="PASS" signature="BookFlight_RoundTrip_TestCase2()[pri:0, instance:Bookings.BookFlight@6737fd8f]" name="BookFlight_RoundTrip_TestCase2" duration-ms="1" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BookFlight_RoundTrip_TestCase2 -->
       </class> <!-- Bookings.BookFlight -->
+      <class name="OnlineCheckin.CheckinOnline">
+        <test-method status="PASS" signature="CheckinOnline_PNR_Number()[pri:0, instance:OnlineCheckin.CheckinOnline@72b6cbcc]" name="CheckinOnline_PNR_Number" duration-ms="1" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckinOnline_PNR_Number -->
+        <test-method status="PASS" signature="CheckinOnline_PNR_Number2()[pri:0, instance:OnlineCheckin.CheckinOnline@72b6cbcc]" name="CheckinOnline_PNR_Number2" duration-ms="1" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckinOnline_PNR_Number2 -->
+      </class> <!-- OnlineCheckin.CheckinOnline -->
+      <class name="Bookings.pmtdp">
+        <test-method status="PASS" signature="testcase1(java.lang.String, java.lang.String)[pri:0, instance:Bookings.pmtdp@3224f60b]" name="testcase1" duration-ms="1" started-at="2020-12-24T19:29:50 IST" data-provider="myData1" finished-at="2020-12-24T19:29:50 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pwd1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase1 -->
+        <test-method status="PASS" signature="testcase1(java.lang.String, java.lang.String)[pri:0, instance:Bookings.pmtdp@3224f60b]" name="testcase1" duration-ms="0" started-at="2020-12-24T19:29:50 IST" data-provider="myData1" finished-at="2020-12-24T19:29:50 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pwd2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase1 -->
+        <test-method status="PASS" signature="testcase1(java.lang.String, java.lang.String)[pri:0, instance:Bookings.pmtdp@3224f60b]" name="testcase1" duration-ms="1" started-at="2020-12-24T19:29:50 IST" data-provider="myData1" finished-at="2020-12-24T19:29:50 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pwd3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase1 -->
+        <test-method status="PASS" signature="testcase1(java.lang.String, java.lang.String)[pri:0, instance:Bookings.pmtdp@3224f60b]" name="testcase1" duration-ms="1" started-at="2020-12-24T19:29:50 IST" data-provider="myData1" finished-at="2020-12-24T19:29:50 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pwd4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase1 -->
+      </class> <!-- Bookings.pmtdp -->
+      <class name="Bookings.pmt">
+        <test-method status="PASS" signature="tc1(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Bookings.pmt@3b084709]" name="tc1" duration-ms="1" started-at="2020-12-24T19:29:50 IST" finished-at="2020-12-24T19:29:50 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.spicejet.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vivek]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc1 -->
+      </class> <!-- Bookings.pmt -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
