@@ -1,0 +1,2 @@
+# training
+The repository contains a few small projects that I created in Python, Java, C++ for my own understanding.
