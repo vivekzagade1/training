@@ -1,0 +1,59 @@
+#!/bin/bash
+
+#1. Takes the directory path as input.
+#2. Traverses the directories and subdirectories beneath the input directory, recursively, upto the leaf nodes (files) 
+#3. Outputs the following for each category of files - count and size in KB/MB.
+#4. Example categories of files are - plain text file, Java source file, image file, PDF files, spreadsheets, documents, binaries, etc
+#
+#Sample output:
+#Java source files | 2,500 |   5 MB
+#Image files       | 1,000 | 100 MB
+#....
+
+
+
+#!/bin/bash
+
+function traverse() {
+  #echo "entering recursion with: ${1}"
+  for file in $1/*
+  do
+      if [[ ! -d "${1}" ]] ; 
+      then
+        #echo "${1} is a file"
+        filename="${1##*/}"
+        extension="${1##*.}"
+        filesize=$(stat -c%b "$1")
+        #echo $extension $filesize
+        if [ "${arr[$extension]}" ]; 
+        then
+          (( arr[$extension]++ ))
+          (( size[$extension]+=$filesize ))
+        else
+          arr[$extension]=1
+          size[$extension]=$filesize
+        fi
+      else
+        local temp=$file
+        traverse "${temp}"
+      fi
+  done
+}
+
+declare -A arr
+declare -A size
+
+arr[java]=0
+size[java]=0
+
+function main() {
+  local dir
+  read -p "Enter Directory : " dir
+  traverse "$dir"
+}
+main
+
+for i in "${!arr[@]}";
+do
+  printf '%s Files \t|%d|\t%d KB\n' "$i" "${arr[$i]}" "${size[$i]}"
+done
