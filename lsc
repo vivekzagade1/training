@@ -18,11 +18,12 @@ function traverse() {
   #echo "entering recursion with: ${1}"
   for file in $1/*
   do
-      if [[ ! -d "${1}" ]] ; 
+      if [[ -f "${1}" ]] ;  
       then
+        #echo $(file -b --mime-type "$1")
         #echo "${1} is a file"
         filename="${1##*/}"
-        extension="${1##*.}"
+        extension=$(file -b --mime-type "$1")
         filesize=$(stat -c%b "$1")
         #echo $extension $filesize
         if [ "${arr[$extension]}" ]; 
@@ -33,7 +34,8 @@ function traverse() {
           arr[$extension]=1
           size[$extension]=$filesize
         fi
-      else
+      elif [[ -d "${1}" && $(ls -A "$1") ]]
+      then
         local temp=$file
         traverse "${temp}"
       fi
