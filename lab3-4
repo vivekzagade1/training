@@ -1,0 +1,91 @@
+Script started on 2021-02-19 13:18:49+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="45"]
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ exittouch test3.2 slide12 cis2
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ touch test3.2 slide12 cis2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Ktouch test3.2 slide12 cis2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kfind $pwd -maxdepth 1 -type f -name "*s*.*"
+./readCensusExcel.py
+./Kazam_screenshot_00005.png
+./Kazam_screenshot_00009.png
+./Kazam_screenshot_00008.png
+./Kazam_screenshot_00007.png
+./Kazam_screenshot_00004.png
+./Kazam_screenshot_00012.png
+./test3.2
+./.lsc.swp
+./Kazam_screenshot_00011.png
+./Kazam_screenshot_00000.png
+./Kazam_screenshot_00002.png
+./Kazam_screenshot_00003.png
+./Kazam_screenshot_00006.png
+./httpd-vhosts.conf
+./Kazam_screenshot_00001.png
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ find $pwd -maxdepth 1 -type f -name "*s*.*"[C[1P"[1P"
+./readCensusExcel.py
+./Task
+./Kazam_screenshot_00005.png
+./.python_history
+./Kazam_screenshot_00009.png
+./.nvidia-settings-rc
+./Kazam_screenshot_00008.png
+./Kazam_screenshot_00007.png
+./slide12
+./Kazam_screenshot_00004.png
+./Kazam_screenshot_00012.png
+./.sudo_as_admin_successful
+./.bash_logout
+./test3.2
+./.lsc.swp
+./.mysql_history
+./Kazam_screenshot_00011.png
+./.wget-hsts
+./Kazam_screenshot_00000.png
+./Kazam_screenshot_00002.png
+./Kazam_screenshot_00003.png
+./.bash_history
+./Kazam_screenshot_00006.png
+./httpd-vhosts.conf
+./cis2
+./.bashrc
+./Kazam_screenshot_00001.png
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ find $pwd -maxdepth 1 -type f -name "??s*"
+./Task
+./test3.2
+./.lsc.swp
+./cis2
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ find $pwd -maxdepth 1 -type f -name "??s*"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kfind $pwd -maxdepth 1 -type f -name "*[1|3]*"
+./slide12
+./Kazam_screenshot_00012.png
+./lab3-4
+./test3.2
+./1617.cpp
+./Kazam_screenshot_00011.png
+./..1617
+./Kazam_screenshot_00003.png
+./Kazam_screenshot_00001.png
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ find $pwd -maxdepth 1 -type f -name "*[0-9]?[0-9]*"
+./Kazam_screenshot_00005.png
+./Kazam_screenshot_00009.png
+./Kazam_screenshot_00008.png
+./Kazam_screenshot_00007.png
+./Kazam_screenshot_00004.png
+./Kazam_screenshot_00012.png
+./lab3-4
+./test3.2
+./1617.cpp
+./Kazam_screenshot_00011.png
+./..1617
+./Kazam_screenshot_00000.png
+./Kazam_screenshot_00002.png
+./Kazam_screenshot_00003.png
+./Kazam_screenshot_00006.png
+./Kazam_screenshot_00001.png
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ cp -i /home/vivek/training/lab1-2 a[Ktest3.2
+cp: overwrite 'test3.2'? y
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ ls -l test3.2
+-rw-rw-r-- 1 vivek vivek 16034 Feb 19 13:59 test3.2
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ mv test3.2 temp2
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ cat test3.2
+cat: test3.2: No such file or directory
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ rm temp 2 [K[K[K2 cis2 slide12
+]0;vivek@vivek-ubuntu: ~[01;32mvivek@vivek-ubuntu[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-02-19 14:02:53+05:30 [COMMAND_EXIT_CODE="0"]
