@@ -1,0 +1,312 @@
+###
+Lab assignment 5-6
+This lab covers directories and links
+
+Module 5
+At your home directory, create a new, empty text file called temp1 
+Use the script utility to capture your session.
+Show the full path name of your home directory
+Without changing directory, do a listing of the root directory, use an option of the list utility so you can see what file type each file is, but don't use the long listing option
+Use the echo command to print to screen what type of files are in the root directory
+Create 2 subdirectories under your home directory, dir1 and dir2
+Use an absolute path to go to the directory dir1
+Copy the file temp1 (currently in your home directory, from step 1) to directory dir1, which is your current directory. You should not have to type temp1 twice on the command line.
+Stay in directory dir1.  Use one command to copy the file temp1 to directory dir2 and call this file temp2.
+Go to your home directory, using the shortest way to run the command.
+Stay in your home directory, move directory dir2 so it becomes a subdirectory of directory dir1
+Stay in your home directory, do a listing of directory dir2 
+Exit script and save the script output file for the next lab time. Keep your dir1 and dir2 directories also.
+--------------------------------------------------------------------------------------------------------------
+Start script again and append to the existing output file of step 16
+Stay in your home directory, create a hard link at your home directory, call the hard link link1, and have it link to file temp1 (in directory dir1).   
+Stay in your home directory, create a hard link in directory dir2 called link2, and have it link to the same file temp1 (in directory dir1).
+Stay in your home directory, use a command to show that file temp1 in dir1 now has 3 hard links
+Stay in your home directory, create a link in directory dir2, call it home and have it link to your home directory
+Use a relative path to go to directory dir2 
+Stay in directory dir2 and use the link home to do a listing of your home directory
+Stay in directory dir2, search from your home directory and down all subdirectories for all regular files that have more than 2 hard links
+Stay in directory dir2, search from your home directory and down all subdirectories for all hard links to the file temp1 in directory dir1 (this will take more than one command)
+Show what utility is run when you run the command ll (2 lowercase letter ‘el’)
+Exit out of script. Save the output file so you can continue with Module 6.
+
+Module 6
+Start script again to capture your screen output, make sure to append to the output file of Module 5.
+Go to your home directory.  Show the permission of your home directory. 
+Create 2 files in home directory called f1 and f2
+Use one command and the octal mode to change the access rights of f1 and f2 so that:	
+	you can read, write, and execute	rwx = 7
+	your group can read			r--   = 4
+	others have no access			---   = 0
+Use one command to show the new access rights of f1 and f2
+Can users in your group copy file f1 from your home directory? Use the echo utility to answer yes / no and why or why not.
+Use the symbolic mode to change the permission of f1 so that there is only read and write permission for you, and there is only execute permission for your group
+Show the new access rights of f1
+Change the default access of new regular files so that you can read and write, your group and others have no access.
+Create a new regular file and show its access rights to see that its default permission is the new one that you just set.
+Exit out of script. 
+
+Copy the file /home/distribution/cnguyen/cis18a/clean.sh to your home directory. This executable will clean up control characters from your output file so you don’t have to do it manually like in the previous lab.
+Run clean.sh with your script output file by typing on the command line:
+clean.sh  filename
+clean.sh will go through and remove the control characters that are in the your file, and will produce a cleaned output file with the same name as your filename, but with an extension .cleaned
+For example, if you run:  clean.sh  lab5-6
+You will have in your directory a file called lab5-6.cleaned
+ Since clean.sh doesn’t remove typing mistakes, backspaces, or commands with errors, use vi on the .cleaned file to remove these errors. (You still have to clean up your own mess ,  just like your mom always said)
+15. Turn in a hard copy of a completely “clean” output file.  You will get full credit only if the file is completely cleaned.
+
+###
+
+Script started on 2021-02-22 13:45:23+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="45"]
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ script -a lab5-6[3Plab5-6[2Ptouch temp1script lab5-6-a lab5-6[Kscript -a lab5-6[3Plab5-6[2Ptouch temp1ssh root@159.203.92.151find . -samefile /home/vivek/dir1/temp1/home/vivek/ -type f -links +2 -printf '%i %n %p\n'
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Pln -s /home/vivek/ ./dir1/dir2/home[1P./dir1/dir2/home /home/vivek/[8P$pwd$pwd ./dir1/dir2/home[8Prm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6@ln -s ./[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd[Klscd homels[Kacd homels ./home[2Phomecd dir1/dir2/rm ./dir1/dir2/home[5@ln -s .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/dir1/dir2/home ./$pwd ./dir1/dir2/home[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P./[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Pecho $pwd[5P$pwd[2Pcd ..ls -l temp1[4Pcd dir1ls -l ./dir1/temp1[10Prm link1ls -l ./dir1/temp1[11Pcd dir1ls -l temp1[6Pcd ..[K$pwdecho $pwdln ./ ./dir1/dir2/home[1@pwd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P./dir1/dir2/home ./[K ./dir1/dir2/home[3@-s [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Prm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pcd dir1/dir2/[6Pls home./home[2Pcd homela[Kscd homels[Kcdln -s ./ ./dir1/dir2/home[6Prm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8@ln -s $pwd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./dir1/dir2/home $pwd/home/vivek/[K/home/vivek/ ./dir1/dir2/home
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfind /home/vivek/ -type f -links +2 -printf '%i %n %p\n'
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17P. -samefile /home/vivek/dir1/temp1
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pssh root@159.203.92.151[12Ptouch temp1script lab5-6-a lab5-6[Kscript -a lab5-6[3Plab5-6[2Ptouch temp1ssh root@159.203.92.151[12Ptouch temp1script lab5-6-a lab5-6[Kscript -a lab5-6[3Plab5-6[2Ptouch temp1
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ pwd
+/home/vivek/training
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ mk [Kdir dir1 dir2
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ ls -f[KF /
+[0m[01;36mbin[0m@  [01;34mboot[0m/  [01;34mcdrom[0m/  [01;34mdev[0m/  [01;34metc[0m/  [01;34mhome[0m/  [01;36mlib[0m@  [01;36mlib32[0m@  [01;36mlib64[0m@  [01;36mlibx32[0m@  [01;34mlost+found[0m/  [01;34mmedia[0m/  [01;34mmnt[0m/  [01;34mopt[0m/  [01;34mproc[0m/  [01;34mroot[0m/  [01;34mrun[0m/  [01;36msbin[0m@  [01;34msnap[0m/  [01;34msrv[0m/  [01;34msys[0m/  [30;42mtmp[0m/  [01;34musr[0m/  [01;34mvar[0m/
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ echo ^?[K[K[K[K[K[Kecho $(ls -F /)
+bin@ boot/ cdrom/ dev/ etc/ home/ lib@ lib32@ lib64@ libx32@ lost+found/ media/ mnt/ opt/ proc/ root/ run/ sbin@ snap/ srv/ sys/ tmp/ usr/ var/
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ cd /home/vivek/dir1tdir1rdir1idir1ndir1idir1ndir1[1Pdir1[1Pdir1[1Pdir1adir1[1Pdir1[1Pdir1adir1idir1ndir1idir1ndir1gdir1/dir1
+]0;vivek@vivek-ubuntu: ~/training/dir1[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training/dir1[00m$ cp ../temp1 .
+]0;vivek@vivek-ubuntu: ~/training/dir1[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training/dir1[00m$ cp ./temp1 ../dir2/temp2
+]0;vivek@vivek-ubuntu: ~/training/dir1[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training/dir1[00m$ cd ..
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ mv dir2 ./dir1/
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ ls ./dir1/dir2
+temp2
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ exit
+exit
+
+Script done on 2021-02-22 13:56:28+05:30 [COMMAND_EXIT_CODE="0"]
+Script started on 2021-02-22 13:56:54+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="45"]
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ ln ./dir1/temp1 link1
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ ln ./dir1/temp1 ./dir1/dir2/link2
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ ls -l ./dir1/temp1
+-rw-rw-r-- 3 vivek vivek 0 Feb 22 13:54 ./dir1/temp1
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ ln -s . ./dir1/dir2/home
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ rm ./dir1/dir2/home
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ ln -s /home/vivek/ ./dir1/dir2/home
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ rm[K[Kln -s /home/vivek/ ./dir1/dir2/home
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Prm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ rm ./dir1/dir2/home[16@ln -s /home/vivek/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct ./dir1/dir2/homer ./dir1/dir2/homea ./dir1/dir2/homei ./dir1/dir2/homen ./dir1/dir2/homen ./dir1/dir2/homeg ./dir1/dir2/home[1P ./dir1/dir2/home[1P ./dir1/dir2/homei ./dir1/dir2/homen ./dir1/dir2/homeg ./dir1/dir2/home
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ cd dir1/dir2/
+]0;vivek@vivek-ubuntu: ~/training/dir1/dir2[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training/dir1/dir2[00m$ ls home
+ 1068.cpp   [0m[01;32m1072[0m       1092.cpp   1618.cpp   282A.cpp   a.cpp        [01;34mdir1[0m             lab4-1   [01;32mlsc.sh[0m          [01;34m'Reading Data from a Spreadsheet'[0m   SparseArray.cpp   [01;32mT3.sh[0m
+ 1069.cpp   1072.cpp   1094.cpp   [01;32m1754[0m       4A.cpp     A.txt        HuffDecode.cpp   lab4-2   [01;32mmyexe[0m            README.md                          student.csv       [01;32mT4.sh[0m
+ 1070.cpp   1083.cpp   158A.cpp   1754.cpp   50A.cpp    B.txt        lab1-2           lab5-6   [01;34mMySpiceProject[0m   sort1.cpp                          [01;32mT1.sh[0m             temp1
+ 1071.cpp   [01;32m1092[0m       1617.cpp   231A.cpp   71A.cpp    CycleD.cpp   lab3-4           link1    Palindrome.cpp   sort2.cpp                          [01;32mT2.sh[0m
+]0;vivek@vivek-ubuntu: ~/training/dir1/dir2[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training/dir1/dir2[00m$ find /home/vivek/training -type f -links +2 -printf '%i %n %p\n'
+4066731 3 /home/vivek/training/link1
+4066731 3 /home/vivek/training/dir1/temp1
+4066731 3 /home/vivek/training/dir1/dir2/link2
+]0;vivek@vivek-ubuntu: ~/training/dir1/dir2[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training/dir1/dir2[00m$ find . -samefile /home/vivek/dir1/temp1[C[C[C[C[C[Ctdir1/temp1rdir1/temp1adir1/temp1idir1/temp1ndir1/temp1gdir1/temp1[1Pdir1/temp1idir1/temp1ndir1/temp1gdir1/temp1/dir1/temp1
+./link2
+]0;vivek@vivek-ubuntu: ~/training/dir1/dir2[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training/dir1/dir2[00m$ ll
+total 8
+drwxrwxr-x 2 vivek vivek 4096 Feb 22 14:01 [0m[01;34m.[0m/
+drwxrwxr-x 3 vivek vivek 4096 Feb 22 13:55 [01;34m..[0m/
+lrwxrwxrwx 1 vivek vivek   20 Feb 22 14:01 [01;36mhome[0m -> [01;34m/home/vivek/training[0m/
+-rw-rw-r-- 3 vivek vivek    0 Feb 22 13:54 link2
+-rw-rw-r-- 1 vivek vivek    0 Feb 22 13:55 temp2
+]0;vivek@vivek-ubuntu: ~/training/dir1/dir2[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training/dir1/dir2[00m$ exit
+exit
+
+Script done on 2021-02-22 14:06:57+05:30 [COMMAND_EXIT_CODE="0"]
+Script started on 2021-02-22 14:08:17+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="45"]
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ ls -l
+total 936
+-rw-rw-r-- 1 vivek vivek    980 Feb  5 16:06  1068.cpp
+-rw-rw-r-- 1 vivek vivek   1542 Feb  5 18:11  1069.cpp
+-rw-rw-r-- 1 vivek vivek   1344 Feb  6 15:45  1070.cpp
+-rw-rw-r-- 1 vivek vivek   1380 Feb  6 18:33  1071.cpp
+-rwxrwxr-x 1 vivek vivek  57952 Feb 18 14:31  [0m[01;32m1072[0m
+-rw-rw-r-- 1 vivek vivek    844 Feb 10 13:11  1072.cpp
+-rw-rw-r-- 1 vivek vivek    944 Feb  5 17:37  1083.cpp
+-rwxrwxr-x 1 vivek vivek 614448 Feb 12 14:17  [01;32m1092[0m
+-rw-rw-r-- 1 vivek vivek   1691 Feb 12 14:17  1092.cpp
+-rw-rw-r-- 1 vivek vivek   1121 Feb 10 12:21  1094.cpp
+-rw-rw-r-- 1 vivek vivek    501 Jan 28 16:24  158A.cpp
+-rw-rw-r-- 1 vivek vivek    859 Feb 12 15:17  1617.cpp
+-rw-rw-r-- 1 vivek vivek    746 Feb 12 18:24  1618.cpp
+-rwxrwxr-x 1 vivek vivek  57896 Feb 13 18:09  [01;32m1754[0m
+-rw-rw-r-- 1 vivek vivek   1246 Feb 13 18:08  1754.cpp
+-rw-rw-r-- 1 vivek vivek    471 Jan 25 20:57  231A.cpp
+-rw-rw-r-- 1 vivek vivek   1734 Feb  5 09:42  282A.cpp
+-rw-rw-r-- 1 vivek vivek    353 Jan 16 17:10  4A.cpp
+-rw-rw-r-- 1 vivek vivek    259 Feb  5 09:28  50A.cpp
+-rw-rw-r-- 1 vivek vivek    411 Jan 25 20:52  71A.cpp
+-rw-rw-r-- 1 vivek vivek   1523 Feb 13 15:14  a.cpp
+-rw-rw-r-- 1 vivek vivek    105 Feb 18 21:03  A.txt
+-rw-rw-r-- 1 vivek vivek    210 Feb 18 21:14  B.txt
+-rw-rw-r-- 1 vivek vivek   1567 Feb  5 21:01  CycleD.cpp
+drwxrwxr-x 3 vivek vivek   4096 Feb 22 13:55  [01;34mdir1[0m
+-rw-rw-r-- 1 vivek vivek    692 Feb  5 21:04  HuffDecode.cpp
+-rw-rw-r-- 1 vivek vivek  18288 Feb 19 14:06  lab1-2
+-rw-rw-r-- 1 vivek vivek   5133 Feb 19 15:13  lab3-4
+-rw-rw-r-- 1 vivek vivek    576 Feb 19 14:24  lab4-1
+-rw-rw-r-- 1 vivek vivek    580 Feb 19 14:53  lab4-2
+-rw-rw-r-- 1 vivek vivek   9824 Feb 22 14:08  lab5-6
+-rw-rw-r-- 3 vivek vivek      0 Feb 22 13:54  link1
+-rwxrwxr-x 1 vivek vivek   1092 Feb  3 19:44  [01;32mlsc.sh[0m
+-rwxrwxr-x 1 vivek vivek  20240 Feb 13 14:28  [01;32mmyexe[0m
+drwxrwxr-x 6 vivek vivek   4096 Dec 23 14:11  [01;34mMySpiceProject[0m
+-rw-rw-r-- 1 vivek vivek   2204 Feb  5 18:53  Palindrome.cpp
+drwxrwxr-x 2 vivek vivek   4096 Dec 23 20:11 [01;34m'Reading Data from a Spreadsheet'[0m
+-rw-rw-r-- 1 vivek vivek    118 Dec 24 19:33  README.md
+-rw-rw-r-- 1 vivek vivek   1080 Feb  5 18:49  sort1.cpp
+-rw-rw-r-- 1 vivek vivek   3542 Feb  5 18:51  sort2.cpp
+-rw-rw-r-- 1 vivek vivek   3816 Feb  5 21:00  SparseArray.cpp
+-rw-rw-r-- 1 vivek vivek    147 Feb 18 16:43  student.csv
+-rwxrw-r-- 1 vivek vivek    960 Feb 18 15:28  [01;32mT1.sh[0m
+-rwxrw-r-- 1 vivek vivek    919 Feb 18 17:04  [01;32mT2.sh[0m
+-rwxrw-r-- 1 vivek vivek    388 Feb 18 20:16  [01;32mT3.sh[0m
+-rwxrwxr-x 1 vivek vivek    742 Feb 18 21:13  [01;32mT4.sh[0m
+-rw-rw-r-- 1 vivek vivek      0 Feb 22 13:49  temp1
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ touch f1 and f2[C[1Pf2[1Pf2[1Pf2[1Pf2[1Pf2 f2
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ chmod 740[K0 f1 f2
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ chmod 740 f1 f2[4Ptouch[C[C[C[C[C[C[6Pls -l
+total 936
+-rw-rw-r-- 1 vivek vivek    980 Feb  5 16:06  1068.cpp
+-rw-rw-r-- 1 vivek vivek   1542 Feb  5 18:11  1069.cpp
+-rw-rw-r-- 1 vivek vivek   1344 Feb  6 15:45  1070.cpp
+-rw-rw-r-- 1 vivek vivek   1380 Feb  6 18:33  1071.cpp
+-rwxrwxr-x 1 vivek vivek  57952 Feb 18 14:31  [0m[01;32m1072[0m
+-rw-rw-r-- 1 vivek vivek    844 Feb 10 13:11  1072.cpp
+-rw-rw-r-- 1 vivek vivek    944 Feb  5 17:37  1083.cpp
+-rwxrwxr-x 1 vivek vivek 614448 Feb 12 14:17  [01;32m1092[0m
+-rw-rw-r-- 1 vivek vivek   1691 Feb 12 14:17  1092.cpp
+-rw-rw-r-- 1 vivek vivek   1121 Feb 10 12:21  1094.cpp
+-rw-rw-r-- 1 vivek vivek    501 Jan 28 16:24  158A.cpp
+-rw-rw-r-- 1 vivek vivek    859 Feb 12 15:17  1617.cpp
+-rw-rw-r-- 1 vivek vivek    746 Feb 12 18:24  1618.cpp
+-rwxrwxr-x 1 vivek vivek  57896 Feb 13 18:09  [01;32m1754[0m
+-rw-rw-r-- 1 vivek vivek   1246 Feb 13 18:08  1754.cpp
+-rw-rw-r-- 1 vivek vivek    471 Jan 25 20:57  231A.cpp
+-rw-rw-r-- 1 vivek vivek   1734 Feb  5 09:42  282A.cpp
+-rw-rw-r-- 1 vivek vivek    353 Jan 16 17:10  4A.cpp
+-rw-rw-r-- 1 vivek vivek    259 Feb  5 09:28  50A.cpp
+-rw-rw-r-- 1 vivek vivek    411 Jan 25 20:52  71A.cpp
+-rw-rw-r-- 1 vivek vivek   1523 Feb 13 15:14  a.cpp
+-rw-rw-r-- 1 vivek vivek    105 Feb 18 21:03  A.txt
+-rw-rw-r-- 1 vivek vivek    210 Feb 18 21:14  B.txt
+-rw-rw-r-- 1 vivek vivek   1567 Feb  5 21:01  CycleD.cpp
+drwxrwxr-x 3 vivek vivek   4096 Feb 22 13:55  [01;34mdir1[0m
+-rwxr----- 1 vivek vivek      0 Feb 22 14:09  [01;32mf1[0m
+-rwxr----- 1 vivek vivek      0 Feb 22 14:09  [01;32mf2[0m
+-rw-rw-r-- 1 vivek vivek    692 Feb  5 21:04  HuffDecode.cpp
+-rw-rw-r-- 1 vivek vivek  18288 Feb 19 14:06  lab1-2
+-rw-rw-r-- 1 vivek vivek   5133 Feb 19 15:13  lab3-4
+-rw-rw-r-- 1 vivek vivek    576 Feb 19 14:24  lab4-1
+-rw-rw-r-- 1 vivek vivek    580 Feb 19 14:53  lab4-2
+-rw-rw-r-- 1 vivek vivek   9824 Feb 22 14:08  lab5-6
+-rw-rw-r-- 3 vivek vivek      0 Feb 22 13:54  link1
+-rwxrwxr-x 1 vivek vivek   1092 Feb  3 19:44  [01;32mlsc.sh[0m
+-rwxrwxr-x 1 vivek vivek  20240 Feb 13 14:28  [01;32mmyexe[0m
+drwxrwxr-x 6 vivek vivek   4096 Dec 23 14:11  [01;34mMySpiceProject[0m
+-rw-rw-r-- 1 vivek vivek   2204 Feb  5 18:53  Palindrome.cpp
+drwxrwxr-x 2 vivek vivek   4096 Dec 23 20:11 [01;34m'Reading Data from a Spreadsheet'[0m
+-rw-rw-r-- 1 vivek vivek    118 Dec 24 19:33  README.md
+-rw-rw-r-- 1 vivek vivek   1080 Feb  5 18:49  sort1.cpp
+-rw-rw-r-- 1 vivek vivek   3542 Feb  5 18:51  sort2.cpp
+-rw-rw-r-- 1 vivek vivek   3816 Feb  5 21:00  SparseArray.cpp
+-rw-rw-r-- 1 vivek vivek    147 Feb 18 16:43  student.csv
+-rwxrw-r-- 1 vivek vivek    960 Feb 18 15:28  [01;32mT1.sh[0m
+-rwxrw-r-- 1 vivek vivek    919 Feb 18 17:04  [01;32mT2.sh[0m
+-rwxrw-r-- 1 vivek vivek    388 Feb 18 20:16  [01;32mT3.sh[0m
+-rwxrwxr-x 1 vivek vivek    742 Feb 18 21:13  [01;32mT4.sh[0m
+-rw-rw-r-- 1 vivek vivek      0 Feb 22 13:49  temp1
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ echo yes [K[K[K[K"you need:
+> 
+> source directory: execute and read permission
+> source file: read permission.
+> target directory: execute and write permission.
+> target file: you don't need any permission since it doesn't exit before you copy it. or write permission if the file exists"
+you need:
+
+source directory: execute and read permission
+source file: read permission.
+target directory: execute and write permission.
+target file: you don't need any permission since it doesn't exit before you copy it. or write permission if the file exists
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ echo ""S"o" "y"e"s" "w"e" "c"a"n"
+So yes we can
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ chmod u-x f1
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ chmod u-x f1[1P[1@g[C[1P[1@+
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ chmod g+x f1[C[1P f1[1P f1- f1r f1
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ chmod g-r f1+x[C[C[Cu-[C[C[C[Cecho "So yes we can"[5Pyou need:
+
+
+source directory: execute and read permission
+
+source file: read permission.
+
+target directory: execute and write permission.
+
+target file: you don't need any permission since it doesn't exit before you copy it. or write permission if the file exists"[A[A[A[A[A
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pls -l
+
+[K
+
+[K
+
+[K
+
+[K
+
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cchmod 740 f1 f2[10Pls -l
+total 944
+-rw-rw-r-- 1 vivek vivek    980 Feb  5 16:06  1068.cpp
+-rw-rw-r-- 1 vivek vivek   1542 Feb  5 18:11  1069.cpp
+-rw-rw-r-- 1 vivek vivek   1344 Feb  6 15:45  1070.cpp
+-rw-rw-r-- 1 vivek vivek   1380 Feb  6 18:33  1071.cpp
+-rwxrwxr-x 1 vivek vivek  57952 Feb 18 14:31  [0m[01;32m1072[0m
+-rw-rw-r-- 1 vivek vivek    844 Feb 10 13:11  1072.cpp
+-rw-rw-r-- 1 vivek vivek    944 Feb  5 17:37  1083.cpp
+-rwxrwxr-x 1 vivek vivek 614448 Feb 12 14:17  [01;32m1092[0m
+-rw-rw-r-- 1 vivek vivek   1691 Feb 12 14:17  1092.cpp
+-rw-rw-r-- 1 vivek vivek   1121 Feb 10 12:21  1094.cpp
+-rw-rw-r-- 1 vivek vivek    501 Jan 28 16:24  158A.cpp
+-rw-rw-r-- 1 vivek vivek    859 Feb 12 15:17  1617.cpp
+-rw-rw-r-- 1 vivek vivek    746 Feb 12 18:24  1618.cpp
+-rwxrwxr-x 1 vivek vivek  57896 Feb 13 18:09  [01;32m1754[0m
+-rw-rw-r-- 1 vivek vivek   1246 Feb 13 18:08  1754.cpp
+-rw-rw-r-- 1 vivek vivek    471 Jan 25 20:57  231A.cpp
+-rw-rw-r-- 1 vivek vivek   1734 Feb  5 09:42  282A.cpp
+-rw-rw-r-- 1 vivek vivek    353 Jan 16 17:10  4A.cpp
+-rw-rw-r-- 1 vivek vivek    259 Feb  5 09:28  50A.cpp
+-rw-rw-r-- 1 vivek vivek    411 Jan 25 20:52  71A.cpp
+-rw-rw-r-- 1 vivek vivek   1523 Feb 13 15:14  a.cpp
+-rw-rw-r-- 1 vivek vivek    105 Feb 18 21:03  A.txt
+-rw-rw-r-- 1 vivek vivek    210 Feb 18 21:14  B.txt
+-rw-rw-r-- 1 vivek vivek   1567 Feb  5 21:01  CycleD.cpp
+drwxrwxr-x 3 vivek vivek   4096 Feb 22 13:55  [01;34mdir1[0m
+-rw---x--- 1 vivek vivek      0 Feb 22 14:09  [01;32mf1[0m
+-rwxr----- 1 vivek vivek      0 Feb 22 14:09  [01;32mf2[0m
+-rw-rw-r-- 1 vivek vivek    692 Feb  5 21:04  HuffDecode.cpp
+-rw-rw-r-- 1 vivek vivek  18288 Feb 19 14:06  lab1-2
+-rw-rw-r-- 1 vivek vivek   5133 Feb 19 15:13  lab3-4
+-rw-rw-r-- 1 vivek vivek    576 Feb 19 14:24  lab4-1
+-rw-rw-r-- 1 vivek vivek    580 Feb 19 14:53  lab4-2
+-rw-rw-r-- 1 vivek vivek  18016 Feb 22 14:21  lab5-6
+-rw-rw-r-- 3 vivek vivek      0 Feb 22 13:54  link1
+-rwxrwxr-x 1 vivek vivek   1092 Feb  3 19:44  [01;32mlsc.sh[0m
+-rwxrwxr-x 1 vivek vivek  20240 Feb 13 14:28  [01;32mmyexe[0m
+drwxrwxr-x 6 vivek vivek   4096 Dec 23 14:11  [01;34mMySpiceProject[0m
+-rw-rw-r-- 1 vivek vivek   2204 Feb  5 18:53  Palindrome.cpp
+drwxrwxr-x 2 vivek vivek   4096 Dec 23 20:11 [01;34m'Reading Data from a Spreadsheet'[0m
+-rw-rw-r-- 1 vivek vivek    118 Dec 24 19:33  README.md
+-rw-rw-r-- 1 vivek vivek   1080 Feb  5 18:49  sort1.cpp
+-rw-rw-r-- 1 vivek vivek   3542 Feb  5 18:51  sort2.cpp
+-rw-rw-r-- 1 vivek vivek   3816 Feb  5 21:00  SparseArray.cpp
+-rw-rw-r-- 1 vivek vivek    147 Feb 18 16:43  student.csv
+-rwxrw-r-- 1 vivek vivek    960 Feb 18 15:28  [01;32mT1.sh[0m
+-rwxrw-r-- 1 vivek vivek    919 Feb 18 17:04  [01;32mT2.sh[0m
+-rwxrw-r-- 1 vivek vivek    388 Feb 18 20:16  [01;32mT3.sh[0m
+-rwxrwxr-x 1 vivek vivek    742 Feb 18 21:13  [01;32mT4.sh[0m
+-rw-rw-r-- 1 vivek vivek      0 Feb 22 13:49  temp1
+]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ clear
+[H[2J[3J]0;vivek@vivek-ubuntu: ~/training[01;32mvivek@vivek-ubuntu[00m:[01;34m~/training[00m$ exit
+exit
+
+Script done on 2021-02-22 14:24:25+05:30 [COMMAND_EXIT_CODE="0"]
